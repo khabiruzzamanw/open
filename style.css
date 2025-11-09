@@ -1,0 +1,47 @@
+:root{
+    --bg-color:rgba(5, 5, 5, 0.95);
+    --font-color:white;
+    --button-color:rgb(99, 99, 99);
+}
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial,sans-serif;
+    background-color: var(--bg-color);
+
+}
+
+main{
+    
+    width:100dvw;
+    height:100dvh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    width:100dvw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+li{
+    padding:10px 20px;
+}
+
+li a{
+    color:var(--font-color);
+    text-decoration: none;
+    padding:10px 20px;
+    background-color: var(--button-color);
+    border-radius:20px;
+}
