@@ -56,15 +56,19 @@ ul li img{
   width:25px;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:700px) {
   nav{
     padding:0 1rem;
   }
 
-  nav ul li input{
-    width:50%;
-    position:relative;
-    right:-6rem;
-  }
+}
+  @media only screen and (max-width:559px){
+    
+    nav ul li input{
+      width:50%;
+      position:relative;
+      right:-6rem;
+    }
+    
   
 }
