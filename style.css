@@ -1,32 +1,32 @@
 :root{
-    --bg-color:#040D12;
-    --header-color:#B3C8CF;
-    --home-color:#040D12;
-    --font-color:#B3C8CF;
-    --box-shadow-color:#183D3D;
-    --border-color:#040D12;
-    --button-color:#003C43;
-    --hovered-button-color:#B3C8CF;
-    --hovered-font-color:#003C43;
+  --bg-color:#040D12;
+  --header-color:#B3C8CF;
+  --home-color:#040D12;
+  --font-color:#B3C8CF;
+  --box-shadow-color:#183D3D;
+  --border-color:#040D12;
+  --button-color:#003C43;
+  --hovered-button-color:#B3C8CF;
+  --hovered-font-color:#003C43;
 
 }
 
 *{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
-    border:none;
-    outline:none;
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+  border:none;
+  outline:none;
 }
 
 body{
-    font-family: Arial,sans-serif;
-    background-color: var(--bg-color);
-    display:grid;
-    grid-template-rows:4rem auto;
+  font-family: Arial,sans-serif;
+  background-color: var(--bg-color);
+  display:grid;
+  grid-template-rows:4rem auto;
 }
 
 img{
-    width:100%;
+  width:100%;
 }
 

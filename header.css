@@ -34,7 +34,7 @@ nav ul li:first-child{
 }
 
 nav ul li input{
-  padding:0.5rem;
+  padding:0.5rem ;
   font-size: 1rem;
   border-radius:1rem;
   background-color:var(--bg-color);
@@ -58,17 +58,17 @@ ul li img{
 
 @media only screen and (max-width:700px) {
   nav{
-    padding:0 1rem;
+   padding:0 1rem;
   }
 
-}
-  @media only screen and (max-width:559px){
-    
-    nav ul li input{
-      width:50%;
-      position:relative;
-      right:-6rem;
-    }
-    
-  
+  }
+@media only screen and (max-width:559px){
+
+  nav ul li input{
+    width:50%;
+    position:relative;
+    right:-6rem;
+  }
+
+
 }
