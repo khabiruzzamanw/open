@@ -1,52 +1,52 @@
 main{
-    width:100dvw;
-    padding:4rem;
-    margin-top:5rem;    
+  width:100dvw;
+  padding:4rem;
+  margin-top:5rem;    
 }
 
 
 
 .web-links{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));
-    gap:2rem;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));
+  gap:2rem;
 }
 
 .web-links .web-card { 
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:0.3rem solid  transparent ;
-    border-radius:1rem ;
-    overflow: hidden;
-    transition: box-shadow 0.2s ease-in, transform 0.2s ease-out,border-color 0.2s ease-in;    
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:0.3rem solid  transparent ;
+  border-radius:1rem ;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in, transform 0.2s ease-out,border-color 0.2s ease-in;    
 }
 
 .web-links .web-card:hover{
-    box-shadow:0 0 10px var(--box-shadow-color),0 0 20px var(--box-shadow-color);
-    transform:translateY(-5px) ;
-    border-color:var(--border-color);
+  box-shadow:0 0 0.8rem var(--box-shadow-color),0 0 1.5rem var(--box-shadow-color);
+  transform:translateY(-5px) ;
+  border-color:var(--border-color);
 }
 
 .web-links .web-card a{
-    color:var(--font-color);
-    text-decoration: none;
-    width:100%;
-    font-size: 1.3rem;
-    padding:0.5rem 0;
-    text-align: center;
-    background-color: var(--button-color);
-    transition: background-color 0.2s ease-in,color 0.2s ease-in;
+  color:var(--font-color);
+  text-decoration: none;
+  width:100%;
+  font-size: 1.3rem;
+  padding:0.5rem 0;
+  text-align: center;
+  background-color: var(--button-color);
+  transition: background-color 0.2s ease-in,color 0.2s ease-in;
 }
 
 .web-links .web-card a:hover{
-    background-color:var(--hovered-button-color);
-    color:var(--hovered-font-color);
+  background-color:var(--hovered-button-color);
+  color:var(--hovered-font-color);
 }
 
 .web-links .web-card img{
-   border-bottom:0.15rem solid var(--border-color);  
+  border-bottom:0.15rem solid var(--border-color);  
 }
 
