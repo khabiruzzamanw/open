@@ -1,5 +1,7 @@
 :root{
     --bg-color:#040D12;
+    --header-color:#B3C8CF;
+    --home-color:#040D12;
     --font-color:#B3C8CF;
     --box-shadow-color:#183D3D;
     --border-color:#040D12;
@@ -20,60 +22,11 @@
 body{
     font-family: Arial,sans-serif;
     background-color: var(--bg-color);
+    display:grid;
+    grid-template-rows:4rem auto;
 }
 
 img{
     width:100%;
-}
-
-main{
-    width:100dvw;
-    padding:4rem;    
-}
-
-
-
-ul{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));
-    gap:2rem;
-}
-
-li{ 
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:0.3rem solid  transparent ;
-    border-radius:1rem ;
-    overflow: hidden;
-    transition: box-shadow 0.2s ease-in, transform 0.2s ease-out,border-color 0.2s ease-in;    
-}
-
-li:hover{
-    box-shadow:0 0 10px var(--box-shadow-color),0 0 20px var(--box-shadow-color);
-    transform:translateY(-5px) ;
-    border-color:var(--border-color);
-}
-
-li a{
-    color:var(--font-color);
-    text-decoration: none;
-    width:100%;
-    font-size: 1.3rem;
-    padding:0.5rem 0;
-    text-align: center;
-    background-color: var(--button-color);
-    transition: background-color 0.2s ease-in,color 0.2s ease-in;
-}
-
-li a:hover{
-    background-color:var(--hovered-button-color);
-    color:var(--hovered-font-color);
-}
-
-li img{
-   border-bottom:0.15rem solid var(--border-color);  
 }
 
