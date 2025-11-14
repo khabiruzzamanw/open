@@ -16,6 +16,10 @@ body{
 
 }
 
+img{
+    width:100%;
+}
+
 main{
     
     width:100dvw;
@@ -24,6 +28,8 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+
 
 ul{
     width:100dvw;
