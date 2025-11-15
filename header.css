@@ -31,12 +31,10 @@ nav ul li:first-child{
   font-weight: 900;
   font-size:2rem;
   text-decoration: none;
-  display: flex;
-
 }
 
 .fixed-li-a span{
-  display: block;
+  display: inline-block;
 }
 .fixed-li-a:hover .home-o{
  animation-name: animateHome;
