@@ -31,7 +31,45 @@ nav ul li:first-child{
   font-weight: 900;
   font-size:2rem;
   text-decoration: none;
+  display: flex;
+
 }
+
+.fixed-li-a span{
+  display: block;
+}
+.fixed-li-a:hover .home-o{
+ animation-name: animateHome;
+ animation-delay: 0s;
+ animation-duration: 1.4s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-p {
+ animation-name: animateHome;
+ animation-delay: 0.1s;
+ animation-duration: 1.4s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-e {
+ animation-name: animateHome;
+ animation-delay: 0.2s;
+ animation-duration: 1.4s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-n {
+ animation-name: animateHome;
+ animation-delay: 0.3s;
+ animation-duration: 1.4s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+}
+
 
 nav ul li input{
   padding:0.5rem ;
@@ -71,4 +109,13 @@ ul li img{
   }
 
 
+}
+
+@keyframes animateHome {
+0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
 }
