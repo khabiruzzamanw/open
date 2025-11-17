@@ -117,4 +117,13 @@ ul li img{
   20% {
     transform: translateY(-5px);
   }
+
+  40%{
+    /* filter:drop-shadow(0 0 0.1rem var(--bg-color)); */
+
+  }
+
+  50%{
+    /* filter:drop-shadow(0.025rem 0 0.15rem var(--bg-color)); */
+  }
 }
