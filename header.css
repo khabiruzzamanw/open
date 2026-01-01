@@ -75,20 +75,19 @@ nav ul li:first-child{
 
 
 nav ul li input{
-  padding:0.5rem ;
+  padding:0.5rem 1rem;
   font-size: 1rem;
   border-radius:1rem;
   background-color:var(--bg-color);
 }
 
-nav ul li input:focus{
+nav ul li input:enabled{
   color:var(--font-color);
   font-size: 1rem;
 }
 
 nav ul li input::placeholder{
   color:var(--font-color);
-  text-align: center;
   opacity: 0.5;
 }
 

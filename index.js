@@ -1,35 +1,31 @@
-const webCards = document.querySelectorAll('.web-card');
-const searchBar = document.getElementById('searchBar');
-const searchButton = document.getElementById('searchButton');
+const webCards = document.querySelectorAll(".web-card");
+const searchBar = document.getElementById("searchBar");
+const searchButton = document.getElementById("searchButton");
 
+searchButton.addEventListener("click", search);
 
-searchButton.addEventListener('click',()=>{
-  
+searchBar.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    search();
+  }
+});
+
+function search() {
   const searchText = searchBar.value.toLowerCase();
 
-  webCards.forEach((a)=>{
-    const cardAnchor = a.querySelector('a');
+  webCards.forEach((a) => {
+    const cardAnchor = a.querySelector("a");
     const anchorText = cardAnchor.textContent.toLowerCase();
 
-    if(anchorText.includes(searchText)){
-      a.style.display = 'flex';
-      
+    if (anchorText.includes(searchText)) {
+      a.style.display = "flex";
+    } else {
+      a.style.display = "none";
     }
+    searchBar.value = "";
 
-    else{
-      a.style.display = 'none' ;
-    }
-    
-    console.log(cardAnchor);
-    console.log(anchorText);
-  })
-  
-  
-
-
-
-
-console.log(searchText);
-
-
-})
+    // console.log(cardAnchor);
+    // console.log(anchorText);
+  });
+  // console.log(searchText);
+}
