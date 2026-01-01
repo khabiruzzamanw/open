@@ -89,6 +89,7 @@ nav ul li input:focus{
 nav ul li input::placeholder{
   color:var(--font-color);
   text-align: center;
+  opacity: 0.5;
 }
 
 
