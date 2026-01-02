@@ -82,6 +82,10 @@ nav ul li input {
   border-bottom: 1px solid var(--bar-color);
 }
 
+.searchButton {
+  cursor: pointer;
+}
+
 nav ul li input:enabled {
   color: var(--font-color);
   font-size: 1rem;
