@@ -1,0 +1,254 @@
+:root {
+  --bg-color: #040d12;
+  --glass-effect-color: rgba(255, 255, 255, 0);
+  --home-color: #b3c8cf;
+  --font-color: #b3c8cf;
+  --box-shadow-color: #183d3d;
+  --border-color: #040d12;
+  --button-color: #003c43;
+  --hovered-button-color: #b3c8cf;
+  --hovered-font-color: #003c43;
+  --bar-color: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+
+img {
+  width: 100%;
+}
+
+
+/*---------------------------------------------------------this section is for header or sidebar-----------------------------------------------------------*/
+
+header {
+  width: 100%;
+  position: -webkit-fixed;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: var(--glass-effect-color);
+  /* background-color:rgba(150, 150, 150, 0.35); */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--bar-color);
+  border-radius: 0 0 1rem 1rem;
+}
+
+nav {
+  width: 100%;
+  padding: 0 4rem;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+.fixed-li-a {
+  color: var(--home-color);
+  font-family: "Sigmar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.fixed-li-a span {
+  display: inline-block;
+}
+
+.fixed-li-a:hover .home-o {
+  animation-name: animateHome;
+  animation-delay: 0s;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-p {
+  animation-name: animateHome;
+  animation-delay: 0.1s;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-e {
+  animation-name: animateHome;
+  animation-delay: 0.2s;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.fixed-li-a:hover .home-n {
+  animation-name: animateHome;
+  animation-delay: 0.3s;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+nav ul li input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: var(--glass-effect-color);
+  border-bottom: 1px solid var(--bar-color);
+}
+
+.searchButton {
+  cursor: pointer;
+}
+
+nav ul li input:enabled {
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+nav ul li input::placeholder {
+  color: var(--font-color);
+  opacity: 0.5;
+}
+
+ul li img {
+  width: 25px;
+}
+
+ul li:last-child {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  nav {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 559px) {
+  nav ul li input {
+    width: 50%;
+    position: relative;
+    right: -6rem;
+  }
+}
+
+@keyframes animateHome {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-5px);
+  }
+
+  40% {
+    /* filter:drop-shadow(0 0 0.1rem var(--bg-color)); */
+  }
+
+  50% {
+    /* filter:drop-shadow(0.025rem 0 0.15rem var(--bg-color)); */
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------this section is for main-----------------------------------------------------------*/
+
+
+
+main {
+  width: 100dvw;
+  padding: 4rem;
+  margin-top: 5rem;
+}
+
+.web-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 2rem;
+}
+
+.web-links .web-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.3rem solid transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in, transform 0.2s ease-out,
+    border-color 0.2s ease-in;
+}
+
+.web-links .web-card:hover {
+  box-shadow: 0 0 0.8rem var(--box-shadow-color),
+    0 0 1.5rem var(--box-shadow-color);
+  transform: translateY(-5px);
+  border-color: var(--border-color);
+}
+
+.web-links .web-card a {
+  color: var(--font-color);
+  text-decoration: none;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: var(--button-color);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.web-links .web-card a:hover {
+  background-color: var(--hovered-button-color);
+  color: var(--hovered-font-color);
+}
+
+.web-links .web-card img {
+  border-bottom: 0.15rem solid var(--border-color);
+}
+
+
+/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------this section is for header or sidebar-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------this section is for header or sidebar-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------this section is for header or sidebar-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
