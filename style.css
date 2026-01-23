@@ -20,14 +20,13 @@
 }
 
 body {
+  max-width: 100%;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
-  display: grid;
-  grid-template-rows: 4rem auto;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -77,6 +76,7 @@ nav ul li:first-child {
 .fixed-li-a span {
   display: inline-block;
 }
+
 .fixed-li-a:hover .home-o {
   animation-name: animateHome;
   animation-delay: 0s;
@@ -139,25 +139,42 @@ ul li:last-child {
   margin-left: 1rem;
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width : 1024px) {
+
   nav {
-    padding: 0 1rem;
+    padding: 0 2rem 0.5rem;
   }
+
 }
-@media only screen and (max-width: 559px) {
+
+@media screen and (max-width : 780px) {
+  nav {
+    padding: 0 1.25rem 0.5rem;
+  }
+
+}
+
+@media screen and (max-width : 500px) {
+  nav {
+    padding: 0 1rem 0.5rem;
+  }
+
   nav ul li input {
     width: 50%;
     position: relative;
     right: -6rem;
   }
+
 }
 
 @keyframes animateHome {
+
   0%,
   40%,
   100% {
     transform: translateY(0);
   }
+
   20% {
     transform: translateY(-5px);
   }
@@ -182,7 +199,7 @@ ul li:last-child {
 
 main {
   width: 100dvw;
-  padding: 4rem;
+  padding: 5vw;
   margin-top: 5rem;
 }
 
@@ -231,7 +248,6 @@ main {
 .web-links .web-card img {
   border-bottom: 0.15rem solid var(--border-color);
 }
-
 
 /*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
 
