@@ -6,138 +6,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Open</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li class="home">
-          <a href="#home" class="fixed-li-a"><span class="home-o">O</span><span class="home-p">p</span><span
-              class="home-e">e</span><span class="home-n">n</span></a>
-        </li>
-        <li>
-          <input type="search" placeholder="Search" class="searchBar" id="searchBar" />
-        </li>
-        <li>
-          <img src="images/search.svg" alt="" class="searchButton" id="searchButton" />
-        </li>
-        <!-- <li class="" id="time"></li> -->
-      </ul>
-    </nav>
-  </header>
-  <main id="home">
-    <section class="web-links">
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://hianime.to/home" class="Hianime" id="" target="_blank">
-          Hianime</a>
-      </div>
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://khabiruzzamanw.github.io/stream" class="Stream" id="" target="_blank">
-          Stream</a>
+  <div class="page">
+    <header>
+      <a href="#" class="logo">Open<span>.</span></a>
+
+      <div class="search-wrap">
+        <input type="search" id="searchBar" placeholder="filter links..." autocomplete="off" />
+        <button class="search-btn" id="searchBtn" aria-label="Search">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10zM14 14l-3-3" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
       </div>
 
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://www.youtube.com/" class="Youtube" id="" target="_blank">
-          Youtube</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://9anime.to/home" class="9anime" id="" target="_blank">9anime</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://gemini.google.com/app" class="Gemini" id="" target="_blank">
-          Gemini</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://khabiruzzamanw.github.io/portfolio/" class="Portfolio" id="" target="_blank">
-          Portfolio</a>
-      </div>
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://khabiruzzamanw.github.io/journix/" class="Journix" id="" target="_blank">
-          Journix</a>
-      </div>
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://khabiruzzamanw.github.io/weatherChecker/" class="weatherChecker" id="" target="_blank">
-          weatherChecker</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://mangadex.org/" class="MangaDex" id="" target="_blank">
-          MangaDex</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://mangaplus.shueisha.co.jp/updates" class="MangaPlus" id="" target="_blank">
-          MangaPlus</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://manhwaread.com/" class="ManhwaRead" id="" target="_blank">
-          ManhwaRead</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://moviebox.ph/" class="Moviebox" id="" target="_blank">
-          Moviebox</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://fojik.site/" class="Mlwbd" id="" target="_blank">
-          Mlwbd</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://www.viz.com/shonenjump" class="Viz/Shonenjump" id="" target="_blank">
-          Viz/Shonenjump</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://m.webtoons.com/en/" class="Webtoons" id="" target="_blank">
-          Webtoons</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://www.hoopladigital.com/" class="Hoopladigital" id="" target="_blank">
-          Hoopladigital</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://mangaplaza.com/" class="MangaPlaza" id="" target="_blank">
-          MangaPlaza</a>
-      </div>
-
-      <div class="web-card">
-        <img src="images/demo.png" alt="this is an image" />
-        <a href="https://manga-scans.com/" class="MangaScan" id="" target="_blank">
-          MangaScan</a>
-      </div>
-    </section>
-  </main>
+      <div class="clock-wrap" id="clock">00:00</div>
+    </header>
 
 
+    <!-- ── MINE / PROJECTS ── -->
+    <div class="section-label">
+      <span class="tag">Mine</span>
+      <span class="line"></span>
+      <span class="count">3 links</span>
+    </div>
+
+    <div class="link-grid wide" id="mine-grid">
+      <a href="https://khabiruzzamanw.github.io/portfolio/" target="_blank" class="link-card" data-name="portfolio"
+        style="--card-accent:#c8f060">
+        <div class="card-icon">🧑‍💻</div>
+        <div class="card-name">Portfolio</div>
+        <div class="card-url">khabiruzzamanw.github.io</div>
+      </a>
+      <a href="https://khabiruzzamanw.github.io/stream" target="_blank" class="link-card" data-name="stream"
+        style="--card-accent:#c8f060">
+        <div class="card-icon">📡</div>
+        <div class="card-name">Stream</div>
+        <div class="card-url">khabiruzzamanw.github.io</div>
+      </a>
+      <a href="https://khabiruzzamanw.github.io/journix/" target="_blank" class="link-card" data-name="journix"
+        style="--card-accent:#c8f060">
+        <div class="card-icon">📓</div>
+        <div class="card-name">Journix</div>
+        <div class="card-url">khabiruzzamanw.github.io</div>
+      </a>
+      <a href="https://khabiruzzamanw.github.io/weatherChecker/" target="_blank" class="link-card"
+        data-name="weatherchecker" style="--card-accent:#40a0ff">
+        <div class="card-icon">🌤️</div>
+        <div class="card-name">WeatherChecker</div>
+        <div class="card-url">khabiruzzamanw.github.io</div>
+      </a>
+    </div>
+
+    <!-- ── WATCH / STREAM ── -->
+    <div class="section-label">
+      <span class="tag accent">Watch</span>
+      <span class="line"></span>
+      <span class="count">4 links</span>
+    </div>
+
+    <div class="link-grid featured" id="watch-grid">
+      <a href="https://hianime.to/home" target="_blank" class="link-card" data-name="hianime"
+        style="--card-accent:#ff5040">
+        <div class="card-icon">⛩️</div>
+        <div class="card-name">Hianime</div>
+        <div class="card-url">hianime.to</div>
+      </a>
+      <a href="https://9anime.to/home" target="_blank" class="link-card" data-name="9anime"
+        style="--card-accent:#ff5040">
+        <div class="card-icon">🌀</div>
+        <div class="card-name">9anime</div>
+        <div class="card-url">9anime.to</div>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" class="link-card" data-name="youtube"
+        style="--card-accent:#ff0000">
+        <div class="card-icon">▶️</div>
+        <div class="card-name">YouTube</div>
+        <div class="card-url">youtube.com</div>
+      </a>
+      <a href="https://moviebox.ph/" target="_blank" class="link-card" data-name="moviebox"
+        style="--card-accent:#40a0ff">
+        <div class="card-icon">🎬</div>
+        <div class="card-name">Moviebox</div>
+        <div class="card-url">moviebox.ph</div>
+      </a>
+    </div>
+
+    <!-- ── READ / MANGA ── -->
+    <div class="section-label">
+      <span class="tag red">Read</span>
+      <span class="line"></span>
+      <span class="count">8 links</span>
+    </div>
+
+    <div class="link-grid" id="read-grid">
+      <a href="https://mangadex.org/" target="_blank" class="link-card" data-name="mangadex"
+        style="--card-accent:#ff6740">
+        <div class="card-icon">📖</div>
+        <div class="card-name">MangaDex</div>
+        <div class="card-url">mangadex.org</div>
+      </a>
+      <a href="https://mangaplus.shueisha.co.jp/updates" target="_blank" class="link-card" data-name="mangaplus"
+        style="--card-accent:#ff3030">
+        <div class="card-icon">🗞️</div>
+        <div class="card-name">MangaPlus</div>
+        <div class="card-url">mangaplus.shueisha.co.jp</div>
+      </a>
+      <a href="https://manhwaread.com/" target="_blank" class="link-card" data-name="manhwaread"
+        style="--card-accent:#ff6740">
+        <div class="card-icon">📚</div>
+        <div class="card-name">ManhwaRead</div>
+        <div class="card-url">manhwaread.com</div>
+      </a>
+      <a href="https://www.viz.com/shonenjump" target="_blank" class="link-card" data-name="viz shonenjump"
+        style="--card-accent:#ff3030">
+        <div class="card-icon">⚔️</div>
+        <div class="card-name">Viz / ShonenJump</div>
+        <div class="card-url">viz.com/shonenjump</div>
+      </a>
+      <a href="https://m.webtoons.com/en/" target="_blank" class="link-card" data-name="webtoons"
+        style="--card-accent:#c8f060">
+        <div class="card-icon">📱</div>
+        <div class="card-name">Webtoons</div>
+        <div class="card-url">webtoons.com</div>
+      </a>
+      <a href="https://www.hoopladigital.com/" target="_blank" class="link-card" data-name="hoopla"
+        style="--card-accent:#ffb840">
+        <div class="card-icon">🏛️</div>
+        <div class="card-name">Hoopladigital</div>
+        <div class="card-url">hoopladigital.com</div>
+      </a>
+      <a href="https://mangaplaza.com/" target="_blank" class="link-card" data-name="mangaplaza"
+        style="--card-accent:#ff6740">
+        <div class="card-icon">🏯</div>
+        <div class="card-name">MangaPlaza</div>
+        <div class="card-url">mangaplaza.com</div>
+      </a>
+      <a href="https://manga-scans.com/" target="_blank" class="link-card" data-name="mangascan"
+        style="--card-accent:#ff6740">
+        <div class="card-icon">🔍</div>
+        <div class="card-name">MangaScan</div>
+        <div class="card-url">manga-scans.com</div>
+      </a>
+    </div>
+
+    <!-- ── TOOLS / AI ── -->
+    <div class="section-label">
+      <span class="tag blue">Tools</span>
+      <span class="line"></span>
+      <span class="count">2 links</span>
+    </div>
+
+    <div class="link-grid wide" id="tools-grid">
+      <a href="https://gemini.google.com/app" target="_blank" class="link-card" data-name="gemini"
+        style="--card-accent:#40a0ff">
+        <div class="card-icon">✦</div>
+        <div class="card-name">Gemini</div>
+        <div class="card-url">gemini.google.com</div>
+      </a>
+      <a href="https://fojik.site/" target="_blank" class="link-card" data-name="mlwbd" style="--card-accent:#ffb840">
+        <div class="card-icon">⬇️</div>
+        <div class="card-name">Mlwbd</div>
+        <div class="card-url">fojik.site</div>
+      </a>
+    </div>
+
+
+
+    <div class="no-results" id="noResults">/ / / no matches found / / /</div>
+
+    <footer>
+      <p>OPEN — personal start page</p>
+      <p id="footerDate"></p>
+    </footer>
+  </div>
   <script src="index.js"></script>
-
 </body>
 
 </html>
