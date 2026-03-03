@@ -1,49 +1,85 @@
-// ─── CLOCK ───
-function updateClock() {
-  const now = new Date();
-  const h = String(now.getHours()).padStart(2, '0');
-  const m = String(now.getMinutes()).padStart(2, '0');
-  document.getElementById('clock').textContent = `${h}:${m}`;
-  const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-  const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-  document.getElementById('footerDate').textContent =
-    `${days[now.getDay()]} ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
-}
-updateClock();
-setInterval(updateClock, 5000);
 
-// ─── SEARCH / FILTER ───
-const searchBar = document.getElementById('searchBar');
-const searchBtn = document.getElementById('searchBtn');
-const allCards = document.querySelectorAll('.link-card');
-const noResults = document.getElementById('noResults');
 
-function filterCards() {
-  const q = searchBar.value.trim().toLowerCase();
-  let visible = 0;
+// // Focus search on '/' key
+// document.addEventListener('keydown', e => {
+//   if (e.key === '/' && document.activeElement !== searchBar) {
+//     e.preventDefault();
+//     searchBar.focus();
+//   }
+// });
 
-  allCards.forEach(card => {
-    const name = card.dataset.name || '';
-    const url = card.querySelector('.card-url')?.textContent.toLowerCase() || '';
-    const match = !q || name.includes(q) || url.includes(q);
-    card.classList.toggle('hidden', !match);
-    if (match) visible++;
-  });
 
-  noResults.classList.toggle('visible', visible === 0 && q !== '');
-}
 
-searchBar.addEventListener('input', filterCards);
-searchBar.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { searchBar.value = ''; filterCards(); }
-  if (e.key === 'Enter') filterCards();
-});
-searchBtn.addEventListener('click', filterCards);
 
-// Focus search on '/' key
-document.addEventListener('keydown', e => {
-  if (e.key === '/' && document.activeElement !== searchBar) {
-    e.preventDefault();
-    searchBar.focus();
+
+
+
+theClock();
+setInterval(theClock,5000) ;
+
+const search = document.querySelector("#search");
+const searchButton = document.querySelector("#searchButton");
+
+search.addEventListener("input", searching);
+
+search.addEventListener("keydown", (keyButton) => {
+  if (keyButton.key === "Enter") {
+    searching();
   }
 });
+
+searchButton.addEventListener("click", searching);
+
+function searching() {
+  const cardGrid = document.querySelectorAll(".cardGrid");
+  const card = document.querySelectorAll(".cardGrid a");
+
+  cardGrid.forEach((grid) => {
+    grid.style.display = "flex";
+  })
+
+  const searchedText = search.value.trim().toLowerCase();
+  // console log 
+  // console.log(searchedText);
+
+  card.forEach((a) => {
+    const aName = a.getAttribute("data-name").toLowerCase();
+
+    if (aName.includes(searchedText) || aName === searchedText) {
+      a.style.display = "flex";
+    }
+    else {
+      a.style.display = "none";
+    }
+  });
+
+  cardGrid.forEach((grid) => {
+
+    if ([...grid.querySelectorAll("a")].every((a) => {
+      // console log 
+      // console.log(a);
+
+      return a.style.display === 'none';
+    })) {
+      grid.style.display = 'none';
+    } else {
+      grid.style.display = 'flex'
+    }
+
+  });
+}
+
+
+function theClock() {
+  const clockDigit = document.querySelector("#clockDigit");
+  const clock = document.querySelector("#clock");
+  const exacttime = new Date();
+
+  const hours = exacttime.getHours();
+  const minutes = exacttime.getMinutes();
+  // console log 
+  console.log(hours, minutes);
+
+  clockDigit.textContent = `${hours}.${minutes}`
+
+}
