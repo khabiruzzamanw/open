@@ -1,37 +1,64 @@
-/*-------------------------------------------------------------------------------------this section is for search------------------------------------------------------------*/
 
+theClock();
+setInterval(theClock, 5000);
 
-const webCards = document.querySelectorAll(".web-card");
-const searchBar = document.getElementById("searchBar");
-const searchButton = document.getElementById("searchButton");
+const search = document.querySelector("#search");
+const searchButton = document.querySelector("#searchButton");
 
-searchButton.addEventListener("click", search);
+search.addEventListener("input", searching);
 
-searchBar.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    search();
+search.addEventListener("keydown", (keyButton) => {
+  if (keyButton.key === "Enter") {
+    searching();
   }
 });
 
-function search() {
-  const searchText = searchBar.value.toLowerCase();
+searchButton.addEventListener("click", searching);
 
-  webCards.forEach((a) => {
-    const cardAnchor = a.querySelector("a");
-    const anchorText = cardAnchor.textContent.toLowerCase();
+function searching() {
+  const cardGrid = document.querySelectorAll(".cardGrid");
+  const card = document.querySelectorAll(".cardGrid a");
 
-    if (anchorText.includes(searchText)) {
+  cardGrid.forEach((grid) => {
+    grid.style.display = "flex";
+  })
+
+  const searchedText = search.value.trim().toLowerCase();
+
+  card.forEach((a) => {
+    const aName = a.getAttribute("data-name").toLowerCase();
+
+    if (aName.includes(searchedText) || aName === searchedText) {
       a.style.display = "flex";
-    } else {
+    }
+    else {
       a.style.display = "none";
     }
-    searchBar.value = "";
-
-    // console.log(cardAnchor);
-    // console.log(anchorText);
   });
-  // console.log(searchText);
+
+  cardGrid.forEach((grid) => {
+
+    if ([...grid.querySelectorAll("a")].every((a) => {
+
+      return a.style.display === 'none';
+    })) {
+      grid.style.display = 'none';
+    } else {
+      grid.style.display = 'flex'
+    }
+
+  });
 }
 
 
-/*-----------------------------------------------------------------------------------------------X----------------------------------------------------------------------------*/
+function theClock() {
+  const clockDigit = document.querySelector("#clockDigit");
+  const clock = document.querySelector("#clock");
+  const exacttime = new Date();
+
+  const hours = exacttime.getHours();
+  const minutes = exacttime.getMinutes();
+
+  clockDigit.textContent = `${hours}.${minutes}`
+
+}
