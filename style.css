@@ -243,6 +243,7 @@
    .mainPage {
      width: 95%;
      gap: 4rem;
+     padding-top: 6rem;
    }
 
    .clock {
