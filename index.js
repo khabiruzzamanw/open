@@ -56,8 +56,10 @@ function theClock() {
   const clock = document.querySelector("#clock");
   const exacttime = new Date();
 
-  const hours = exacttime.getHours();
-  const minutes = exacttime.getMinutes();
+  const hours = exacttime.getHours().toString().padStart(2, "0");
+  const minutes = exacttime.getMinutes().toString().padStart(2, "0");
+  // console log 
+  console.log(hours, minutes);
 
   clockDigit.textContent = `${hours}.${minutes}`
 
