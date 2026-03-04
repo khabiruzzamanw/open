@@ -15,7 +15,7 @@
 
 
 theClock();
-setInterval(theClock,5000) ;
+setInterval(theClock, 5000);
 
 const search = document.querySelector("#search");
 const searchButton = document.querySelector("#searchButton");
